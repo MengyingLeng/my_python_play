@@ -64,8 +64,10 @@ def constructNet(images,weights,biases,is_training):
 	dense1 = tf.matmul(dense1, weights['wd1']) + biases['bd1']
 	dense1 = batch_norm(dense1, is_training)
 	dense1 = tf.nn.relu(dense1)
+	dense1 = tf.nn.dropout(dense1, 0.8, noise_shape=None, seed=None, name=None)
 	#全连接2
 	dense2 = tf.nn.relu(tf.matmul(dense1, weights['wd2']) + biases['bd2'])
+	dense2 = tf.nn.dropout(dense2, 0.8, noise_shape=None, seed=None, name=None)
 	#全连接3
 	out = tf.matmul(dense2, weights['out']) + biases['out']
 	return out
