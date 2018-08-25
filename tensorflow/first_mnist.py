@@ -1,3 +1,9 @@
+# -----------------------------------------------------------------------------------------------------
+'''
+@author:	hongwen sun
+&usage:		TensorFlow练习之卷积神经网络
+'''
+# -----------------------------------------------------------------------------------------------------
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("mnist/", one_hot = True, reshape = False)
