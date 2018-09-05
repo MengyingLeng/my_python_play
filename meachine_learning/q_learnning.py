@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 import time
 
-np.random.seed(2)
+#np.random.seed(2)
 
-N_STATS = 6
+N_STATS = 7
 ACTIONS = ['left', 'right']
 EPSILION = 0.9
 ALPHA = 0.1

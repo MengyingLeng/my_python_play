@@ -19,6 +19,7 @@ def pooling(featmamps, kernel_size, name):
 
 def batch_norm(featmamps, is_train):
 	return tf.layers.batch_normalization(featmamps, training=is_train)
+
 w_alpha=0.01
 b_alpha=0.1
 weights = {
